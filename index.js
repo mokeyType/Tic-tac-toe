@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 info.style.display = 'flex';
                 settings_section.style.display = 'none';
                 about_game.style.display = 'none';
+                win_msg.style.display = 'none';
+                draw_msg.style.display = 'none';
+                playagain_button.style.display = 'none';
             } else info.style.display = '';
         }
     }
@@ -245,7 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     themebutton.addEventListener('click', changetheme);
 
-    // music.play();
+    //-------------------------------------------------------------------------------------
+
     function soundC() {
         if (soundbutton.textContent === "Sound off") {
             soundbutton.textContent = "Sound on";
@@ -265,6 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 settings_section.style.display = 'flex';
                 info.style.display = 'none';
                 about_game.style.display = 'none';
+                win_msg.style.display = 'none';
+                draw_msg.style.display = 'none';
+                playagain_button.style.display = 'none';
             } else {
                 settings_section.style.display = 'none';
             }
@@ -278,9 +285,17 @@ document.addEventListener('DOMContentLoaded', () => {
             about_game.style.display = 'flex';
             settings_section.style.display = 'none';
             info.style.display = 'none';
+            win_game.style.display = 'none';
+            draw_msg.style.display = 'none';
+            playagain_button.style.display = 'none';
+            
         } else {
             about_game.style.display = 'none';
         }
     }
     us_info.addEventListener('click', ag_on);
 })
+function firsPLay(){
+        music.play();
+    }
+    window.onload=firsPLay;
